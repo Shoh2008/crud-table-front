@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body::-webkit-scrollbar {
+    height: 0;
+    width: 6px;
+    background: #2e2e2e;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: #000;
+    border-radius: 5px;
+}
+
+.block {
+    width: 100%;
+    min-height: 100vh;
+    border: .1px double transparent;
+}
+
+.header {
+    padding: 0 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 95%;
+    margin: 20px auto !important;
+}
+
+.header div {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.search {
+    width: 50% !important;
+}
