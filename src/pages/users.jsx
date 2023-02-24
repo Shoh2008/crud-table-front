@@ -6,11 +6,11 @@ const Users = ({ setValue, submit, toggle, setName, search }) => {
   const [user, setUser] = useState([]);
 
   const deleteUser = (id) => {
-    axios.delete("https://crud-table-api-production.up.railway.app/api/users/" + id).then(() => get());
+    axios.delete("https://crud-table-api.onrender.com/api/users/" + id).then(() => get());
   };
 
   const get = () => {
-    axios.get("https://crud-table-api-production.up.railway.app/api/users").then((res) => {
+    axios.get("https://crud-table-api.onrender.com/api/users").then((res) => {
       setUser(res.data);
     });
   };
@@ -19,7 +19,7 @@ const Users = ({ setValue, submit, toggle, setName, search }) => {
     user.map((item) => {
       if (item.id == id) {
         axios
-          .put("https://crud-table-api-production.up.railway.app/api/users/" + id, {
+          .put("https://crud-table-api.onrender.com/api/users/" + id, {
             ...user[id],
             id: item.id,
             name: item.name,
